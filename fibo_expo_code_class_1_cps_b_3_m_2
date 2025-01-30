@@ -1,3 +1,20 @@
+/***
+
+
+
+Factorial
+Fibonacci
+Printing digits of a number (forward and backward order)
+Calculating a^b using binary exponentiation 
+Given a set of coin values and a target amount, is it possible to make the target amount using the coins
+
+
+
+*/
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
