@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int mem[100005];
+int mark[100005];
+
+int fib(int n){
+
+   if(n <= 1) return n;
+
+   if(mark[n] == 1) return mem[n];
+
+   int res = fib(n-1) + fib(n-2);
+
+   mem[n] = res;
+   mark[n] = 1;
+
+   return res;
+
+}
+
+/// jodi amader negative number use korte na hoi
+
+int fib(int n){
+
+ if(n <= 1) return n;
+ if(mem[n] != -1) return mem[n];
+ return mem[n] = fib(n-1) + fib(n-1);
+
+}
+
+int main(){
+
+///  memset(mem, -1, sizeof(mem));
+
+   int n;
+   cin >> n;
+
+   cout << fib(n);
+
+return 0;
+}
