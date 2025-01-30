@@ -1,0 +1,77 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+/***
+
+Dp process
+
+
+1. problem pora
+
+2. 1st step --> 1) Bruteforce code likha
+                2) ek oi state e jodi bar bar jai oi part tah k  save / memoize kore rakha
+
+
+
+
+
+*/
+
+
+/** DP problem types
+
+
+   1. Counting /  number of ways  ber kora
+
+   2.  minimization / maximization
+
+
+*/
+
+
+/***
+
+***numbers of ways ber korar ketre --->
+
+solve (int n )  ///  ekan n e sum koto baki ace oitah store korbo   {
+
+
+
+
+}
+
+
+*/
+
+/// Bruteforce code
+
+int n;
+int solve(int sum){
+
+  /// handle base case
+
+  if( sum == 0) return 1;
+
+  int res = 0;
+
+  for(int j = 1; j <= 6; j++){
+    if(sum >= j){
+         res += solve(sum - j);
+    }
+  }
+  return res;
+
+}
+
+
+int main(){
+
+   // int n;
+    cin >> n;
+
+    int ans = solve(n);
+
+    cout << ans << '\n';
+
+return 0;
+}
