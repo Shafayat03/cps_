@@ -40,3 +40,45 @@ int main(){
 
 return 0;
 }
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+/// a ^ b   ber korbo recursion use kore
+/**
+
+   a ^ b --->  even hole   (a^ b/2) ^ 2
+
+   a ^ b --->  odd hole   ( a ^ b -1 ) * 2
+
+*/
+
+
+int power(int a, int b){
+
+ if(b == 0) return 1;
+
+ if(b % 2 == 0){
+     int x = power(a, b/2);
+     return x * x;
+
+ }
+ else{
+    return power(a, b - 1)* a;
+ }
+
+
+}
+
+
+int main(){
+
+     int a, b;
+     cin >> a >> b ;
+
+     cout << power(a,b);
+
+return 0;
+}
