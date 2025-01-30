@@ -150,6 +150,7 @@ int isPossible(int n){
 
     for(int coin :coins){
         if(isPossible(n - coin)) res =  1;
+break;
     }
 
     return dp[n] = res;
