@@ -171,3 +171,36 @@ int main(){
 return 0;
 }
 
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+/// akta recursive function likhbo jtah integer digit gula print korbe
+
+void print_digits(int n){
+
+  if(n == 0) return;
+
+  int last_digit = n % 10;
+
+  cout << last_digit << '\n';
+  
+  print_digits(n /10);  /// number reversely print korte chaile  ei state tah cout er age dite hobe 
+
+}
+
+int main(){
+
+ // memset(dp, -1, sizeof(dp));
+    int n;
+    cin >> n;
+
+    print_digits(n);
+    
+
+
+return 0;
+}
