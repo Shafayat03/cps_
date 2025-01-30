@@ -44,7 +44,7 @@ solve (int n )  ///  ekan n e sum koto baki ace oitah store korbo   {
 */
 
 /// Bruteforce code
-
+complexity : O(6^n)
 int n;
 int solve(int sum){
 
